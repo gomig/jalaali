@@ -11,11 +11,7 @@ import (
 
 // TehranTz get tehran time zone
 func TehranTz() *time.Location {
-	l, err := time.LoadLocation("Asia/Tehran")
-	if err != nil {
-		return nil
-	}
-	return l
+	return time.FixedZone("Asia/Tehran", 12600)
 }
 
 // KabulTz get kabul time zone
